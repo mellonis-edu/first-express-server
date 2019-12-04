@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.end(`
     <h1>Sign In Form</h1>
-    <form method="POST" action="/sign-up" autocomplete="off">
+    <form method="POST" action="/sign-in" autocomplete="off">
       <div>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required autocomplete="off">
