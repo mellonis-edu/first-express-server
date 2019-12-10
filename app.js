@@ -6,6 +6,8 @@ const {
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 const startRouter = require('./routes/start');
 const signUpRouter = require('./routes/signUp');
 const signInRouter = require('./routes/signIn');
