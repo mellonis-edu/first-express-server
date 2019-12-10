@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const {
   PORT = 3000,
@@ -6,6 +7,7 @@ const {
 
 const app = express();
 
+app.use(bodyParser.urlencoded());
 app.set('view engine', 'ejs');
 
 const startRouter = require('./routes/start');

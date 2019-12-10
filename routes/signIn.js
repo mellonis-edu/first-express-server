@@ -13,8 +13,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.statusCode = 501;
-  res.end('Not implemented yet!..');
+  res.end(JSON.stringify(req.body));
 });
 
 module.exports = router;
