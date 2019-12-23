@@ -6,7 +6,7 @@ const {
 } = process.env;
 
 const app = express();
-
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded());
 app.set('view engine', 'ejs');
 

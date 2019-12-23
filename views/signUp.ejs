@@ -1,26 +1,32 @@
-<h1>Sign Up Form</h1>
-<form method="POST" action="/sign-up" autocomplete="off">
-  <div>
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required autocomplete="off" value="<%= name %>">
-  </div>
-  <div>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required autocomplete="off" value="<%= email %>">
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required autocomplete="off" value="<%= password %>">
-  </div>
-  <div>
-    <label for="password_confirmation">Password again</label>
-    <input type="password" name="passwordConfirmation" id="password_confirmation" required autocomplete="off" value="<%= passwordConfirmation %>">
-  </div>
-  <% if (errorMessage) { %>
-    <div class="error">
-      <%= errorMessage %>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head', {title: 'Sign Up Page'}); %>
+<body>
+  <h1>Sign Up Form</h1>
+  <form method="POST" action="/sign-up" autocomplete="off">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required autocomplete="off" value="<%= name %>">
     </div>
-  <% } %>
-  <button>Sign Up</button>
-</form>
-<a href="/sign-in">Sign In</a>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required autocomplete="off" value="<%= email %>">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required autocomplete="off" value="<%= password %>">
+    </div>
+    <div>
+      <label for="password_confirmation">Password again</label>
+      <input type="password" name="passwordConfirmation" id="password_confirmation" required autocomplete="off" value="<%= passwordConfirmation %>">
+    </div>
+    <% if (errorMessage) { %>
+      <div class="error">
+        <%= errorMessage %>
+      </div>
+    <% } %>
+    <button>Sign Up</button>
+  </form>
+  <a href="/sign-in">Sign In</a>
+</body>
+</html>

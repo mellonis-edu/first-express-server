@@ -1,0 +1,21 @@
+:root {
+  --color1: #0f0f0e;
+  --color2: #33392b;
+  --color3: #67705c;
+  --color4: #a5131d;
+  --color5: #431517;
+}
+
+body {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+a {
+  color: var(--color4);
+}
+
+a:visited {
+  color: var(--color5);
+}
+

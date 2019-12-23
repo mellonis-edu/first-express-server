@@ -1,18 +1,24 @@
-<h1>Sign In Form</h1>
-<form method="POST" action="/sign-in" autocomplete="off">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required autocomplete="off" value="<%= email %>">
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required autocomplete="off" value="<%= password %>">
-  </div>
-  <% if (errorMessage) { %>
-    <div class="error">
-      <%= errorMessage %>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head', {title: 'Sign In Page'}); %>
+<body>
+  <h1>Sign In Form</h1>
+  <form method="POST" action="/sign-in" autocomplete="off">
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required autocomplete="off" value="<%= email %>">
     </div>
-  <% } %>
-  <button>Sign Ip</button>
-</form>
-<a href="/sign-up">Sign Up</a>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required autocomplete="off" value="<%= password %>">
+    </div>
+    <% if (errorMessage) { %>
+      <div class="error">
+        <%= errorMessage %>
+      </div>
+    <% } %>
+    <button>Sign Ip</button>
+  </form>
+  <a href="/sign-up">Sign Up</a>
+</body>
+</html>
