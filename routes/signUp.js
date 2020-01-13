@@ -4,6 +4,10 @@ const userList = require('../store/userList');
 const router = express.Router();
 
 router.get('/', (req, res) => {
+  if (req.userId) {
+    return res.redirect('/home');
+  }
+
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   res.render('signUp', {
     name: '',

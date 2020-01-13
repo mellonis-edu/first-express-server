@@ -1,5 +1,7 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const userMiddleware = require('./utils/userMiddleware');
 
 const {
   PORT = 3000,
@@ -8,6 +10,8 @@ const {
 const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded());
+app.use(cookieParser());
+app.use(userMiddleware);
 app.set('view engine', 'ejs');
 
 const startRouter = require('./routes/start');
