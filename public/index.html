@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test Html</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <form id="controls">
+    <div>
+      <input id="radio_get_list" type="radio" name="type" value="get_list">
+      <label for="radio_get_list">GET LIST</label>
+    </div>
+    <div>
+      <input id="radio_get_book" type="radio" name="type" value="get_book">
+      <label for="radio_get_book">GET BOOK</label>
+    </div>
+    <div>
+      <input id="radio_create_book" type="radio" name="type" value="create_book">
+      <label for="radio_create_book">CREATE BOOK</label>
+    </div>
+    <div>
+      <input id="radio_remove_book" type="radio" name="type" value="remove_book">
+      <label for="radio_remove_book">REMOVE BOOK</label>
+    </div>
+  </form>
+  <hr>
+
+  <form id="get_list">
+    <button>GET LIST</button>
+  </form>
+  <form id="get_book">
+    <div>
+      ID:
+      <input type="text" name="id">
+    </div>
+    <button>GET BOOK</button>
+  </form>
+  <form id="create_book">
+    <div>
+      TITLE:
+      <input type="text" name="title">
+    </div>
+    <div>
+      AUTHOR:
+      <input type="text" name="author">
+    </div>
+    <button>CREATE BOOK</button>
+  </form>
+  <form id="remove_book">
+    <div>
+      ID:
+      <input type="text" name="id">
+    </div>
+    <button>REMOVE BOOK</button>
+  </form>
+
+  <hr>
+
+  <div id="result">
+
+  </div>
+</body>
+</html>

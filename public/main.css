@@ -2,7 +2,7 @@
   --color1: #0f0f0e;
   --color2: #33392b;
   --color3: #67705c;
-  --color4: #a5131d;
+  --color4: white;
   --color5: #431517;
 }
 
@@ -19,3 +19,6 @@ a:visited {
   color: var(--color5);
 }
 
+.hidden {
+  display: none;
+}
